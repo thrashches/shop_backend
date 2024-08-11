@@ -78,4 +78,5 @@ class Product(models.Model):
 
     class Meta:
         ordering = ['-time_updated']
-        # чуть позже пропишу тут verbose_name для админки
+        verbose_name = 'Товар'
+        verbose_name_plural = 'Товары'
