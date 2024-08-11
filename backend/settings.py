@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'products'
+    'products.apps.ProductsConfig'
 ]
 
 MIDDLEWARE = [
@@ -49,6 +49,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+MEDIA_ROOT = BASE_DIR / 'media'
+
+MEDIA_URL = ''
 
 ROOT_URLCONF = 'backend.urls'
 
