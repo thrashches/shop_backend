@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+</head>
+<body>
+    <h1>Наши пирожные :^)</h1>
+    <table>
+      <tr>
+        <th>Название товара</th>
+        <th width="200">Категория</th>
+        <th>Описание</th>
+        <th width="70">Вес</th>
+        <th width="70">Цена</th>
+        <th>Фото</th>
+      </tr>
+      {% for product in products %}
+      <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.info }}</td>
+        <td>{{ product.weight }}</td>
+        <td>{{ product.price }}</td>
+        <td><img src="{{ product.image.url }}" alt="{{ product.name }}"></td>
+      </tr>
+      {% endfor %}
+    </table>
+</body>
+</html>
