@@ -1,14 +1,14 @@
 from django.db import models
 
 class Category(models.Model):
-    name = models.CharField(max_length=255, verbose_name='Название')
+    name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True)
 
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name = 'Категория'
+        verbose_name = 'Категории'
         verbose_name_plural = 'Категории'
 
 
@@ -54,8 +54,8 @@ class Product(models.Model):
     energy_value = models.DecimalField(
         max_digits=6,
         decimal_places=2,
-        null=True,
-        blank=True,
+        null=False,
+        blank=False,
         verbose_name='Энергетическая ценность'
     )
 
